@@ -1,5 +1,6 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 img {
@@ -7,9 +8,33 @@ img {
   height: 100px;
 }
 
+/* flex container for .title class (to attribute flex display) */
+.heading {
+  display:flex;
+  justify-content: center;
+  margin-bottom:50px;
+}
+
 .title {
   font-size: 36px;
   font-weight: 900;
+}
+
+
+.plants {
+  display:flex;
+  margin-top:20px;
+  justify-content: center;
+  gap: 100px;
+}
+
+/* Adjusting the max width and having containers for each image and text block puts the text below the image 
+
+Makes sense, as if the image can only be 200px wide (horizontal), you can fit it vertically by squeezing it down!!!!
+
+*/
+.info {
+  max-width:200px;
 }
 
 /* do not edit this footer */
