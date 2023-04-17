@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display:flex;
+  /* Forgot to adjust the flex-direction to column!!! This allowed for separating top flexbox to mid flex box */
+  flex-direction:column;
 }
 
 img {
@@ -25,3 +28,69 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+ul{
+  list-style: none;
+  /* Missed this, brought elements back into frame vs. when it was block */
+  display:flex;
+  /* Fixed alignment to borders */
+  margin:0;
+  padding:0; /* Eliminate automatic margins and padding from unordered lists */
+  gap:16px;
+}
+
+/*
+.footer{
+  display:flex;
+  margin-top:800px;
+  justify-content:space-between;
+  align-items:center;
+}
+*/
+
+/* Header and footer follow same exact layout flex wise, can just efficiently style them together here */
+.header,.footer{
+  display:flex;
+  /* Did this correctly!!! */
+  justify-content:space-between;
+  padding:16px;
+  
+}
+
+/* Did this correct! no need to utilize solution */
+.content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  flex:1;
+}
+
+/* Was more focused on organizing flex boxes, ignored the specific text color; can eliminate text link deocrations with the property here on all a elements */
+a{
+  color:#666;
+  text-decoration:none;
+}
+
+.left-links{
+  display:flex;
+  gap: 12px;
+}
+
+.right-links{
+  display:flex;
+  gap:12px;
+  align-content:flex-end;
+}
+
+.content img{
+  align-items:center;
+  justify-content: center;
+}
+
+/* Remove text formatting (the long way)
+a:link{text-decoration: none;}
+a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:active{text-decoration: none;}
+*/
